@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-export const CreateTask = () => {
-
+export const CreateTask = (props) => {
   const [task, setTask] = useState({
     title:'',
     content:'',
@@ -16,6 +15,17 @@ export const CreateTask = () => {
         [name]:value,
       }
     })
+  }
+
+  function submitTask(event) {
+    props.onAdd(task);
+    
+    setTask({
+      title:'',
+      content:''
+    })
+
+    event.preventDefault();
   }
 
   return (
@@ -38,7 +48,7 @@ export const CreateTask = () => {
             onChange={detectChange}
             ></textarea>
 
-            <button className="btn btn-primary TodoButton">Add</button>
+            <button className="btn btn-primary TodoButton" onClick={submitTask}>Add</button>
         </form>
     </div>
   )

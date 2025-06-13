@@ -4,10 +4,14 @@ import Header from './components/Header'
 
 function App() {
 
+  const addTask = (newTask) => {
+    console.log(newTask);
+  }
+
   return (
     <>
      <Header />
-     <CreateTask />
+     <CreateTask onAdd={addTask} />
     </>
   )
 }
