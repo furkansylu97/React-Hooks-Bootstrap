@@ -1,5 +1,6 @@
 import "./App.css";
 import { CreateTask } from "./components/CreateTask";
+import { Footer } from "./components/Footer";
 import Header from "./components/Header";
 import { Task } from "./components/Task";
 import { useState } from "react";
@@ -40,6 +41,7 @@ function App() {
           })}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
