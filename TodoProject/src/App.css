@@ -14,3 +14,24 @@ header {
   display: flex;
   justify-content: center;
 }
+
+.CreateTaskWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.CreateTaskForm {
+  padding: 20px;
+  width: 250px;
+  border: 1px solid lightblue;
+  border-radius: 30px;
+  margin-top: 20px;  
+}
+
+.TodoText {
+ border: none;
+}
+
+.TodoButton {
+  width: 100px;
+}
